@@ -1,8 +1,14 @@
-import { FizzBuzzService } from './fizzbuzz.service';
+import { fizzBuzz } from './fizzbuzz.service';
 
 describe('fizzbuzz service', () => {
     it('should create the service', () => {
-        const svc = FizzBuzzService
-        expect(svc).not.toBeUndefined()
-    })
-})
+        expect(fizzBuzz).not.toBeUndefined();
+    });
+
+    it('should return "Divided 1 by 3" when input is 1', () => {
+        const input = 1;
+        const actual = fizzBuzz(input);
+        const expected = 'Divided 1 by 3';
+        expect(actual).toBe(expected);
+    });
+});
