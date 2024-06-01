@@ -1,4 +1,4 @@
-import { fizzBuzz } from './fizzbuzz.service';
+import { fizzBuzz } from './fizzbuzz-service';
 
 describe('fizzbuzz service', () => {
     it('should create the service', () => {
