@@ -25,17 +25,26 @@ function App() {
   };
 
   return (<>
-    <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} placeholder='Please enter an array of values' />
-      <input type="submit" />
-    </form>
+    <div className="container">
+      <div className="p-5">
+        <form onSubmit={handleSubmit}>
+          <div className="input-group input-group-lg">
+            <input type="text" className="form-control" onChange={handleChange} placeholder='Please enter an array of values' />
+            <input className="btn btn-primary" type="submit" value="Submit" />
+          </div>
+        </form>
+        <h3 className="p-5 text-center">Response will show below here</h3>
+        <hr />
+        {response.error ?
+          <div>{response.error}</div> :
+          response.data.map(responseText => {
+            return <h3>{responseText}</h3>;
+          })
+        }
+      </div>
+    </div>
 
-    {response.error ?
-      <div>{response.error}</div> :
-      response.data.map(x => {
-        return <div>{x}</div>;
-      })
-    }
+
   </>
   );
 }

@@ -4,7 +4,7 @@ import { validate } from '../validation/validation-service';
 
 const fizzBuzz = (inputs: string[]): string[] => {
     return inputs.map(input => {
-        return getText(input);
+        return getText(String(input));
     });
 };
 
