@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "npm run build --prefix client && node --loader ts-node/esm src/server.ts",
+    "installAll": "npm install --prefix client && npm install",
     "test": "jest --watchAll"
   },
   "keywords": [],
