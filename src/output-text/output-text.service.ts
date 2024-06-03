@@ -1,4 +1,4 @@
-import { textResponses } from './text-responses';
+import { textResponses } from '../constants/text-responses';
 
 const getInvalidItemText = () => {
     return textResponses.INVALID_ITEM;
